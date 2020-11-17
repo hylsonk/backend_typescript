@@ -26,10 +26,7 @@ class NewsController {
         } catch (error) {
             console.error(error);
         }
-
-
     }
-
     async getById(req, res) {
         try {
             const _id = req.params.id;
@@ -41,7 +38,6 @@ class NewsController {
         }
 
     }
-
     async create(req, res) {
 
         try {
@@ -53,7 +49,6 @@ class NewsController {
         } catch (error) {
             console.error(error);
         }
-
     }
 
     async update(req, res) {
@@ -68,8 +63,6 @@ class NewsController {
         } catch (error) {
             console.error(error);
         }
-
-
     }
 
     async delete(req, res) {
@@ -82,7 +75,6 @@ class NewsController {
         } catch (error) {
             console.error(error);
         }
-
     }
 }
 
