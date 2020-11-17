@@ -37,6 +37,20 @@ class NewsController {
         } catch (error) {
             console.error(error);
         }
+    }
+
+    async search(req, res) {
+        try {
+            const term = req.params.term;
+
+            const page = (req.param('page')) ? parseInt(req.param('page')) : 1;
+            const perPage = (req.param('limit')) ? parseInt(req.param('limit')) : 10;
+
+            let result = await NewsService.search(term, page, perPage);
+            Helper.sendResponse(res, HttpStatus.OK, result);
+        } catch (error) {
+            console.error(error);
+        }
 
     }
 
